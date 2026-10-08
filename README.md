@@ -8,18 +8,18 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 
 | Bloque | Matrícula | Nombre | Usuario de GitHub | Máquina | Componente |
 | --- | --- | --- | --- | --- | --- |
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | 25292 | Yurik David Alarcon Gutierez | Kothy-Web | Robot Ensamblador | |
+| 2 | 25173 | Cesar Leonardo Garrido Gonzalez| clgarridog1604 | Cortadora Laser  | |
+| 3 | 26011 | Alejandro Salguero Vega | alexsalguerov/stack | Impresora 3D | |
+| 4 | 25085 | Jorge Antonio Sadurni Cerdio | Jorge-Sadurni | Banda Transpotadora| |
+| 5 | 25176 | Dannia Ximena Plata Palos | dannia-plata | Inspeccion | |
 | 6 (solo equipo de seis) | | | | | |
 
 ## 2. Orden de la línea
 
 Escriban el orden en que una pieza recorre las estaciones.
 
-[Inserta aquí tu respuesta]
+[La impresora 3D fabrica las llantas y el chasis del carrito. La banda transportadora lleva esas piezas a la cortadora láser, donde se realizan los detalles; después las lleva al robot ensamblador, que las une para formar el carrito. Finalmente, la banda transporta el carrito hasta la estación de inspección para el control de calidad.]
 
 ## 3. Cómo compilar y ejecutar
 
