@@ -43,11 +43,11 @@ Lote de 20 piezas. Una fila por máquina.
 
 | Máquina | Segundos por pieza | Límite del componente | Fallas en 20 piezas | Tiempo trabajado |
 | --- | --- | --- | --- | --- |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+| Impresora 3D | 180 s | 15 pzs| 1 falla | 3,600 s (60 min)|
+| Cortadora Laser| 15 s | 30 pzs| 0 | 300 s (5 min) |
+| Insepccion| 25 s | 25pzs | 0 | 500 s (8.3 min) |
+| Banda de Transportacion| 10 s | 50pzs| 0 | 200 s (3.3 min) |
+| Robot Ensamblador| 8 s | 40 pzs| 0 | 160 s (2.6 min) |
 
 **Reporte esperado (piezas terminadas, tiempo total y paros):**
 
