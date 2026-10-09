@@ -31,11 +31,11 @@ Escriban el comando exacto que usa el equipo para compilar y el comando para eje
 
 **¿En qué momento exacto falla una máquina?**
 
-[Inserta aquí tu respuesta]
+La falla ocurre al finalizar el ciclo de procesamiento de la pieza que alcanza el límite de desgaste del componente. La máquina queda inoperativa para el siguiente ciclo hasta que se aplique el mantenimiento.
 
 **¿El mantenimiento suma tiempo al turno? ¿Cuánto?**
 
-[Inserta aquí tu respuesta]
+Sí, cada operación de mantenimiento suma un tiempo fijo de 120 segundos al tiempo total del turno, simulando el periodo de inactividad necesario para restaurar el componente afectado.
 
 ## 5. Cálculo a mano del reporte
 
