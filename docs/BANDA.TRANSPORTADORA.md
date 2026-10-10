@@ -1,9 +1,9 @@
-# Documentación de la clase: [Banda Trasnportadora]
+# Documentación de la clase: Banda Trasnportadora
 
 
 **Elaborada por:** Jorge Antonio Sadurni Cerdio
 **Matrícula:** 25085
-**Bloque:** [Inserta aquí tu número de bloque]
+**Bloque:** 4
 
 ## 1. Propósito
 
@@ -13,7 +13,7 @@ Banda Transportadora - La banda transportadora es responsable de transladar las 
 
 **¿Cuál es su componente y por qué no existe sin la máquina?**
 
-Motor no existe sin la mquina porque su ciclo de 
+Motor no existe sin la maquina porque su ciclo de 
 vida depende de la banda transportadora, si la maquina se destruye el componente deja de existtir.
 La funcion del componente motor es generar energia mecanica para que haya movimiento de rotacion y la banda pueda desplazarse sobre sus rodamientos y poleas.
 
@@ -25,7 +25,7 @@ Los atributos propios de banda son los siguientes:
 -float velocidadBanda
 -float capacidadCargaMax
 
-La primera validacion es de velocidaBanda, valida que la banda se este moviendo cuanto sea requerida con la 
+La primera validacion es de velocidadBanda, valida que la banda se este moviendo cuanto sea requerida con la 
  condicion de que sea mayor a 0m/s y que tenga una velocidad maxima de 5m/s.
  La segunda validacion es de de capacidadCargaMax, se asegura de que el peso sea mayor a 0Kgs y establce un limite 
  10Kg.
@@ -33,8 +33,8 @@ La primera validacion es de velocidaBanda, valida que la banda se este moviendo 
 **Métodos propios (los que la clase base no tiene):**
 
 Metodos propios de la clase derivada:
-+ajustarVelocidad(v: float);
-+transportar(obj:string, dest:string);
++ajustarVelocidad(v: float)
++transportar(obj:string, dest:string)
 
 **Método de la base que redefines, y cómo reutilizas la versión de la base:**
 
@@ -42,7 +42,7 @@ Metodos de la base que se redifinieron:
 +procesarPieza();
 +realizarMantenimiento
 
-La clase de banda transportadora llama a Maquina::procesarPieza como todas las 5 maquinas para sumar una pieza al lote y el tiempo acumulado de trabajo y de manera individual agrega el desgaste del motor de la maquina derivada. Por otro lado, la clase llama a el metodo de realizarMantenimiento para quitar la falla y anotar el paro de produccion y por aparte restablece la vida util del componente de desgaste.
+La clase de banda transportadora llama a Maquina::procesarPieza como todas las 5 maquinas para sumar una pieza al lote y el tiempo acumulado de trabajo y de manera individual agrega el desgaste del motor de la maquina derivada. Por otro lado, la clase llama Maquina::realizarMantenimiento para quitar la falla y anotar el paro de produccion y por aparte restablece la vida util del componente de desgaste.
 
 
 **¿Cómo modelaste el desgaste del componente y por qué así?**
@@ -51,7 +51,7 @@ Modele el desgaste del componenete como una relacion de composicion (HAS-A) entr
 
 **¿Qué usa tu clase de `Maquina` y qué agrega?**
 
-Usa los medotos de realizarMantenimiento y ProcesarPiza de maquina, los cuales los redefine. Agrega los atributos propios
+Usa los medotos de realizarMantenimiento y ProcesarPieza de maquina, los cuales los redefine. Agrega los atributos propios
 de velocidadBanda, capacidadCargaMax y Motor y sus metodos independientes de ajustarVelocidad y transportar.
 
 
@@ -59,7 +59,7 @@ de velocidadBanda, capacidadCargaMax y Motor y sus metodos independientes de aju
 
 Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relación de herencia con `Maquina` y la de composición con tu componente. Guarda la imagen en `docs/` y enlázala aquí.
 
-![\[Diagrama individual\]](../Diseño.Clase.drawio.png)
+![Diagrama Inidivual](Diseño.Clase.Banda.png)
 
 ## 4. Bitácora
 
