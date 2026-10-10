@@ -63,7 +63,7 @@ Lote de 20 piezas. Una fila por máquina.
 
 Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen como `docs/diagrama_general.png`.
 
-![Diagrama general](docs/diagrama_general.png)
+![Diagrama general](docs_diagrama_general.png)
 
 ## 7. Documentación individual
 
