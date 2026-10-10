@@ -51,7 +51,9 @@ Lote de 20 piezas. Una fila por máquina.
 
 **Reporte esperado (piezas terminadas, tiempo total y paros):**
 
-[Inserta aquí tu respuesta]
+20 piezas terminadas
+1 paro de produccion
+3,720 s (62 min)
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron?**
 
