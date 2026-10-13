@@ -63,14 +63,14 @@ Lote de 20 piezas. Una fila por máquina.
 
 Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen como `docs/diagrama_general.png`.
 
-![Diagrama general](docs_diagrama_general.png)
+![Diagrama general](docs_diagrama_general.png) 
 
 ## 7. Documentación individual
 
 | Integrante | Documentación de su clase | Propuesta de mejora |
 | --- | --- | --- |
 | | `docs/<Clase>.md` | `docs/mejoras/<matrícula>/mejora.md` |
-| | | |
+| Alejandro Salguero Vega | docs\IMPRESORA3D_CLASE.md | docs\mejoras\26011\IMPRESORA3D_MEJORA.md |
 | | | |
 | | | |
 | | | |
