@@ -31,11 +31,11 @@ Escriban el comando exacto que usa el equipo para compilar y el comando para eje
 
 **¿En qué momento exacto falla una máquina?**
 
-[Inserta aquí tu respuesta]
+La falla ocurre al finalizar el ciclo de procesamiento de la pieza que alcanza el límite de desgaste del componente. La máquina queda inoperativa para el siguiente ciclo hasta que se aplique el mantenimiento.
 
 **¿El mantenimiento suma tiempo al turno? ¿Cuánto?**
 
-[Inserta aquí tu respuesta]
+Sí, cada operación de mantenimiento suma un tiempo fijo de 120 segundos al tiempo total del turno, simulando el periodo de inactividad necesario para restaurar el componente afectado.
 
 ## 5. Cálculo a mano del reporte
 
@@ -43,15 +43,17 @@ Lote de 20 piezas. Una fila por máquina.
 
 | Máquina | Segundos por pieza | Límite del componente | Fallas en 20 piezas | Tiempo trabajado |
 | --- | --- | --- | --- | --- |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+| Impresora 3D | 180 s | 15 pzs| 1 falla | 3,600 s (60 min)|
+| Cortadora Laser| 15 s | 30 pzs| 0 | 300 s (5 min) |
+| Insepccion| 25 s | 25pzs | 0 | 500 s (8.3 min) |
+| Banda de Transportacion| 10 s | 50pzs| 0 | 200 s (3.3 min) |
+| Robot Ensamblador| 8 s | 40 pzs| 0 | 160 s (2.6 min) |
 
 **Reporte esperado (piezas terminadas, tiempo total y paros):**
 
-[Inserta aquí tu respuesta]
+20 piezas terminadas
+1 paro de produccion
+3,720 s (62 min)
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron?**
 
@@ -61,7 +63,7 @@ Lote de 20 piezas. Una fila por máquina.
 
 Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen como `docs/diagrama_general.png`.
 
-![Diagrama general](docs/diagrama_general.png)
+![Diagrama general](docs_diagrama_general.png)
 
 ## 7. Documentación individual
 
