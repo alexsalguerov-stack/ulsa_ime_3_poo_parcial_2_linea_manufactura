@@ -24,6 +24,7 @@ La funcion del componente motor es generar energia mecanica para que haya movimi
 Los atributos propios de banda son los siguientes:
 -float velocidadBanda
 -float capacidadCargaMax
+-Motor
 
 La primera validacion es de velocidadBanda, valida que la banda se este moviendo cuanto sea requerida con la 
  condicion de que sea mayor a 0m/s y que tenga una velocidad maxima de 5m/s.

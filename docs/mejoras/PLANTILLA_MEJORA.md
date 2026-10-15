@@ -4,7 +4,7 @@
 >
 > La propuesta es solo diseño: no se programa.
 
-**Propuesta de mejora elaborada por:** [Inserta aquí tu nombre]
+**Propuesta de mejora elaborada por:** Jorge Antonio Sadurni Cerdio
 
 ## 1. Impacto
 

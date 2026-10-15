@@ -1,7 +1,7 @@
 #ifndef BANDATRANSPORTADORA_H
 #define BANDATRANSPORTADORA_H
 
-#include "MAQUINA.H"
+#include "Maquina.h"
 #include "Motor.h"
 #include <string>
 
@@ -13,19 +13,21 @@ private:
     Motor motor;
 
 public:
+    // Constructor con el orden correcto de parámetros
     BandaTransportadora(float velocidad, float cargaMax, int id, std::string nombre, int vidaMotor);
-    void ajustarVelocidad(float v);
+
+    // Getters y Setters
+    void setvelocidadBanda(float v);
     float getVelocidad() const;
 
-    void setCapacidadCargaMax(float c) const;
+    void setCapacidadCargaMax(float c); // Se quitó el 'const'
     float getCargaMax() const;
 
-    void ajustarVelocidad(float v);
+    // Métodos de operación
     void transportar(std::string objeto, std::string destino);
-
     void procesarPieza();
-    void registMantenimiento();
-    void mostrarEstado();
+    void realizarMantenimiento();
+    void mostrarEstado() const;
 };
 
 #endif
