@@ -71,7 +71,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | --- | --- | --- |
 | | `docs/<Clase>.md` | `docs/mejoras/<matrícula>/mejora.md` |
 | Alejandro Salguero Vega | docs\IMPRESORA3D_CLASE.md | docs\mejoras\26011\IMPRESORA3D_MEJORA.md |
-| | | |
+| Jorge Antonio Sadurni Cerdio | docs\BANDA.TRANSPORTADORA.md | docs\mejoras\25085\PLANTILLA_MEJORA_Banda_Transportadora.md |
 | | | |
 | | | |
 
