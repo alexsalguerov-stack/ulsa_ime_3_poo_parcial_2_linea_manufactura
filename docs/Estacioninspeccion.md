@@ -1,42 +1,50 @@
-# Documentación de la clase: [Inserta aquí el nombre de tu clase]
+# Documentación de la clase: Estacioninspeccion
 
-> Copia este archivo como `docs/<Clase>.md` (por ejemplo, con el nombre de tu máquina) y llena tu copia. No modifiques la plantilla.
 
-**Elaborada por:** [Inserta aquí tu nombre]
-**Matrícula:** [Inserta aquí tu matrícula]
-**Bloque:** [Inserta aquí tu número de bloque]
+**Elaborada por:** [Dannia Ximena Plata Palos]
+**Matrícula:** [25176]
+**Bloque:** [5]
 
 ## 1. Propósito
 
 **¿Qué máquina representa tu clase y qué operación hace sobre la pieza?**
 
-[Inserta aquí tu respuesta]
+[Es la estación de inspección. Mide la pieza y revisa que esté dentro de la tolerancia. Tarda 10 segundos por pieza.]
 
 **¿Cuál es su componente y por qué no existe sin la máquina?**
 
-[Inserta aquí tu respuesta]
+[Su componente es el Sensor. Se va descalibrando con cada pieza que mide. Es composición porque el sensor se crea dentro de la estación y se borra cuando la estación se borra.]
 
 ## 2. Decisiones de diseño
 
 **Atributos propios de tu clase y validación de cada uno:**
 
-[Inserta aquí tu respuesta]
+[Atributos propios de tu clase y validación de cada uno:
+• Sensor sensor: el componente. Si su límite es 0 o menos, se usa 1.
+• float toleranciaError: error máximo aceptado. Si es 0 o menos, se usa 0.05.
+• int medicionesRealizadas: cuenta las piezas medidas. Empieza en 0.
+• int segundosPorPieza: tiempo por pieza. Si es 0 o menos, se usa 10.]
 
 **Métodos propios (los que la clase base no tiene):**
 
-[Inserta aquí tu respuesta]
+[Métodos propios (los que la clase base no tiene):
+
+medirTolerancia(float valor): dice si el error medido está dentro de la tolerancia.
+inspeccionarCalidad(): hace una medición. Como no se pueden usar números aleatorios, el error sigue un ciclo fijo: 0.00, 0.01, 0.02 y 0.03 mm.
+procesarPieza(): mide una pieza, suma la pieza y el tiempo, y gasta el sensor.
+realizarMantenimiento(): recalibra el sensor y quita la falla.]
 
 **Método de la base que redefines, y cómo reutilizas la versión de la base:**
 
-[Inserta aquí tu respuesta]
+[Redefino mostrarEstado(). Primero llamo a Maquina::mostrarEstado(), que imprime los datos generales (id, nombre, piezas, tiempo y paros). Después imprimo los datos de mi estación y de mi sensor.]
 
 **¿Cómo modelaste el desgaste del componente y por qué así?**
 
-[Inserta aquí tu respuesta]
+[El sensor tiene una vida que baja de 1 en 1 con cada pieza. Al llegar a 0, la máquina entra en falla. Lo hice con un número entero para poder calcular a mano cuándo falla: con límite 30 y un lote de 20 piezas, el sensor no falla y termina con 10 de vida. El mantenimiento regresa la vida al límite.]
 
 **¿Qué usa tu clase de `Maquina` y qué agrega?**
 
-[Inserta aquí tu respuesta]
+[Usa el constructor, puedeProcesar(), registrarPieza(), agregarTiempo(), reportarFalla(), registrarMantenimiento() y mostrarEstado(). Agrega el sensor, la tolerancia y la inspección de calidad.]
 
 ## 3. Diagrama
 
@@ -48,8 +56,8 @@ Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relació
 
 **Dudas que tuviste y cómo las resolviste:**
 
-[Inserta aquí tu respuesta]
+[• ¿Importa el límite del sensor si el lote es de 20 piezas? Sí, porque se compara con el tamaño del lote. Con límite 30 y 20 piezas el sensor no falla; si el límite fuera igual al lote, fallaría en la última pieza.]
 
 **Errores que encontraste y cómo los corregiste:**
 
-[Inserta aquí tu respuesta]
+[VS Code marcaba que Sensor no estaba definido. Los archivos no estaban guardados y los nombres tenían mayúsculas distintas. Los guardé y corregí los nombres.]

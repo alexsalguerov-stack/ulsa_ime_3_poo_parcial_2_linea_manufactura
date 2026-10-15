@@ -1,20 +1,36 @@
-#ifndef SENSOR_H
-#define SENSOR_H
+#include "Sensor.h"
 
+Sensor::Sensor(int lim) {
 
-class Sensor {
-private:
-    int vidaUtil;   
-    int limite;    
+    if (lim <= 0) {
+        lim = 1;
+    }
 
-public:
-    Sensor(int lim);
+    limite = lim;
+    vidaUtil = lim;
+}
 
-    bool reducirVida();   
-    void restaurar();    
+bool Sensor::reducirVida() {
 
-    int getVidaUtil() const;
-    int getLimite() const;
-};
+    if (vidaUtil > 0) {
+        vidaUtil = vidaUtil - 1;
+    }
 
-#endif
+    if (vidaUtil == 0) {
+        return true;
+    }
+
+    return false;
+}
+
+void Sensor::restaurar() {
+    vidaUtil = limite;
+}
+
+int Sensor::getVidaUtil() const {
+    return vidaUtil;
+}
+
+int Sensor::getLimite() const {
+    return limite;
+}
