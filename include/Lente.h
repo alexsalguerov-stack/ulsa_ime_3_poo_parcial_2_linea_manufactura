@@ -1,0 +1,20 @@
+#ifndef LENTE_H
+#define LENTE_H
+
+using namespace std;
+
+class Lente {
+private:
+    int vidaUtil;
+
+public:
+    Lente(int vida = 10);
+
+    bool reducirVida();
+
+    int getVidaUtil();
+
+    void restaurar();
+};
+
+#endif

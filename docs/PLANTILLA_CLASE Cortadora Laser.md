@@ -1,19 +1,20 @@
-# Documentación de la clase: Impresora_3D
+# Documentación de la clase: [Inserta aquí el nombre de tu clase]
 
+> Copia este archivo como `docs/<Clase>.md` (por ejemplo, con el nombre de tu máquina) y llena tu copia. No modifiques la plantilla.
 
-**Elaborada por:** Alejandro Salguero Vega
-**Matrícula:** 26011
+**Elaborada por:** [Inserta aquí tu nombre]
+**Matrícula:** [Inserta aquí tu matrícula]
 **Bloque:** [Inserta aquí tu número de bloque]
 
 ## 1. Propósito
 
 **¿Qué máquina representa tu clase y qué operación hace sobre la pieza?**
 
-Impresora 3D - Imprime el chasis y las llantas del carrito de juguete.
+[Inserta aquí tu respuesta]
 
 **¿Cuál es su componente y por qué no existe sin la máquina?**
 
-La función del extrusor es mover el material a traves de la boquilla caliente por lo que necesita una forma de moverse en los tres ejes de movimiento y una base en la cual depositar el movimiento.
+[Inserta aquí tu respuesta]
 
 ## 2. Decisiones de diseño
 
