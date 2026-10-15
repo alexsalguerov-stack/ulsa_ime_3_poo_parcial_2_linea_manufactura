@@ -66,7 +66,7 @@ Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relació
 
 **Dudas que tuviste y cómo las resolviste:**
 
-[Inserta aquí tu respuesta]
+Las dudas que tuve fueron, cuales metodos esenciales tiene que tener la clase derivada, banda transportadora , y la clase composicion, motor. Tambien cuales metodos pudiera redefinir para reciclar o sintetizar parte del programa. Con el diagrama general pude definir que atributos y metodos tenian ambas clases.
 
 **Errores que encontraste y cómo los corregiste:**
 
