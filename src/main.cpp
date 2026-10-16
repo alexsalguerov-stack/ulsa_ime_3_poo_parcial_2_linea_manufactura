@@ -4,7 +4,7 @@
 #include "BandaTransportadora.h"
 #include "CortadoraLaser.h"
 #include "RobotEnsamblador.h"
-#include "Estacioninspeccion.h"
+#include "include/EstacionInspeccion.h"
 
 int main()
 {
