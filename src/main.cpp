@@ -10,7 +10,7 @@ int main()
 {
     Planta miPlanta;
 
-    // --- CREACIÓN DE MÁQUINAS (Adaptado a nuevos constructores de los compañeros) ---
+    // --- CREACIÓN DE MÁQUINAS ---
 
     // Impresora 3D (id, nombre)
     Impresora3D impresora(1, "Impresora 3D");
@@ -57,7 +57,7 @@ int main()
     std::cout << "\nLote finalizado. Piezas completadas: " << piezasFinales << "/20\n";
     miPlanta.generarReporte();
 
-    // 5. Apagar sistema
+    // 5. Apagar línea
     impresora.apagar();
     banda.apagar();
     laser.apagar();
