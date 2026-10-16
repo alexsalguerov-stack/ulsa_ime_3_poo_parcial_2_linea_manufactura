@@ -8,7 +8,6 @@ Maquina::Maquina(int _id, const std::string &_nombre)
     piezasProcesadas = 0;
     paros = 0;
     tiempoTrabajado = 0;
-    piezasProcesadas = 0;
     enFalla = false;
     encendida = false;
 }
