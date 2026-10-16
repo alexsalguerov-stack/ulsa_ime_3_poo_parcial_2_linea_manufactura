@@ -1,56 +1,63 @@
 #include "Planta.h"
-#include "Maquina.h"
 #include <iostream>
 
-Planta::Planta()
-{
-    piezasTerminadas = 0;
-}
+int Planta::procesarLote(int cantidad) {
+    int piezasTerminadas = 0;
 
-void Planta::agregarMaquina(Maquina *maquina)
-{
-    maquinas.push_back(maquina);
-}
+    for (int i = 1; i <= cantidad; ++i) {
+        bool piezaCompletada = true;
+        std::cout << "\n--- Procesando Pieza #" << i << " ---\n";
 
-void Planta::procesarLote(int cantidadPiezas)
-{
-    int tiempoMantenimientoTotal = 0;
+        for (Maquina* m : linea) {
+            // Si la máquina está en falla, se le da mantenimiento inmediatamente
+            if (m->estaEnFalla()) {
+                std::cout << "Línea detenida: " << m->getNombre() << " requiere mantenimiento." << std::endl;
+                m->realizarMantenimiento();
+            }
 
-    for (int i = 0; i < cantidadPiezas; i++)
-    {
-        for (Maquina *m : maquinas)
-        {
-            if (!m->puedeProcesar())
-            {
-                std::cout << "La maquina " << m->getNombre()
-                          << " requiere de mantenimiento" << std::endl;
+            // Procesar la pieza
+            m->procesarPieza();
 
-                if (!m->estaEncendida())
-                {
-                    m->encender();
-                }
-
-                tiempoMantenimientoTotal += 120;
+            // Si la máquina entró en falla durante el proceso, la pieza se detiene aquí
+            if (m->estaEnFalla()) {
+                std::cout << "La pieza se detuvo en " << m->getNombre() << " debido a una falla." << std::endl;
+                piezaCompletada = false;
+                break;
             }
         }
-        piezasTerminadas++;
+        if (piezaCompletada) {
+            piezasTerminadas++;
+            std::cout << "Pieza #" << i << " terminada exitosamente.\n";
+        }
     }
-
-    std::cout << "Tiempo total de mantenimiento en el lote: "
-              << tiempoMantenimientoTotal << " segundos." << std::endl;
+    return piezasTerminadas;
 }
 
-void Planta::mostrarReporte() const
-{
-    std::cout << "\n==================================" << std::endl;
-    std::cout << "      REPORTE DE LA PLANTA        " << std::endl;
-    std::cout << "==================================" << std::endl;
-    std::cout << "Piezas completadas en el turno: " << piezasTerminadas << std::endl;
-    std::cout << "\n--- Estado de cada Estacion ---" << std::endl;
+void Planta::generarReporte() {
+    int tiempoTotal = 0;
+    int parosTotales = 0;
 
-    for (const Maquina *m : maquinas)
-    {
-        m->mostrarEstado();
-        std::cout << "----------------------------------" << std::endl;
+    std::cout << "\n==========================================\n";
+    std::cout << "          REPORTE FINAL DEL TURNO         \n";
+    std::cout << "==========================================\n";
+
+    for (Maquina* m : linea) {
+        tiempoTotal += m->getTiempoTrabajado();
+        parosTotales += m->getParos();
     }
+
+    // Cada mantenimiento suma 120s según README
+    int tiempoMantenimiento = parosTotales * 120;
+
+    std::cout << "Tiempo total de operacion: " << (tiempoTotal + tiempoMantenimiento) << " s\n";
+    std::cout << "Total de paros por mantenimiento: " << parosTotales << "\n";
+    std::cout << "------------------------------------------\n";
+
+    for (Maquina* m : linea) {
+        std::cout << m->getNombre() << " \t| "
+                  << m->getPiezasProcesadas() << " piezas | "
+                  << m->getParos() << " paros | "
+                  << (m->estaEnFalla() ? "ESTADO: FALLA" : "ESTADO: OK") << "\n";
+    }
+    std::cout << "==========================================\n";
 }

@@ -35,7 +35,10 @@ protected:
     void reportarFalla();
 
     // Quita la falla y suma un paro.
-    void registrarMantenimiento();
+    virtual void registrarMantenimiento();
+
+    // Metodo para realizar el mantenimiento especifico de la maquina y su componente
+    virtual void realizarMantenimiento() {}
 
 public:
     // Crea una máquina apagada, sin falla y con sus contadores en cero.
