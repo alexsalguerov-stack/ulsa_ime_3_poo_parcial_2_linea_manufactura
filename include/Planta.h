@@ -13,8 +13,12 @@ private:
 public:
     Planta() {}
 
-    void registrarMaquina(Maquina *m) {
-        linea.push_back(m);
+    void registrarMaquina(Maquina *m)
+    {
+        if (m != nullptr)
+        {
+            linea.push_back(m);
+        }
     }
 
     int procesarLote(int cantidad);

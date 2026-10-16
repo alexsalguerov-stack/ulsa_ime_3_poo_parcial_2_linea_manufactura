@@ -5,24 +5,22 @@
 #include "Maquina.h"
 #include "Sensor.h"
 
-
-class EstacionInspeccion : public Maquina {
+class EstacionInspeccion : public Maquina
+{
 private:
-    Sensor sensor;             
-    float toleranciaError;      
-    int medicionesRealizadas;   
-    int segundosPorPieza;       
+    Sensor sensor;
+    float toleranciaError;
+    int medicionesRealizadas;
+    int segundosPorPieza;
 
 public:
     EstacionInspeccion(int id, std::string nombre, float tolerancia,
                        int limiteSensor, int segundos);
 
-   
     bool medirTolerancia(float valor);
     bool inspeccionarCalidad();
 
-
-    bool procesarPieza();
+    void procesarPieza();
     void realizarMantenimiento();
 
     void mostrarEstado() const;

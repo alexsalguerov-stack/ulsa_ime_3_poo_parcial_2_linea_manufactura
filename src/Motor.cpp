@@ -26,7 +26,7 @@ bool Motor::reducirVida()
 bool Motor::restablecerVida()
 {
     vidaActual = vidaUtil;
-    std::cout << "Motor restaurado al 100% de su capacidad (" << vidaUtil << " ciclos)." << std::endl;
+    return true;
 }
 
 int Motor::getVidaActual() const

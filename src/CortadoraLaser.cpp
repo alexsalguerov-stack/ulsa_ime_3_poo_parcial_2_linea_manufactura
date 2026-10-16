@@ -1,34 +1,38 @@
 #include "CortadoraLaser.h"
+#include <iostream>
+
+using namespace std;
 
 CortadoraLaser::CortadoraLaser(
     int id,
     string nombre,
     float potencia,
-    float velocidad
-)
-: Maquina(id, nombre)
+    float velocidad)
+    : Maquina(id, nombre), lente(30) // Inicializa el lente con 30 usos predeterminados
 {
     potenciaLaser = potencia;
     velocidadCorte = velocidad;
 }
 
-void CortadoraLaser::ajustarPotencia(float p) {
-
-    if (p > 0) {
+void CortadoraLaser::ajustarPotencia(float p)
+{
+    if (p > 0)
+    {
         potenciaLaser = p;
     }
 }
 
-void CortadoraLaser::grabarDetalle(string patron) {
-
+void CortadoraLaser::grabarDetalle(string patron)
+{
     cout << "Grabando detalle: "
          << patron
          << endl;
 }
 
-void CortadoraLaser::procesarPieza() {
-
-    if (!puedeProcesar()) {
+void CortadoraLaser::procesarPieza()
+{
+    if (!puedeProcesar())
+    {
         cout << "No se puede procesar la pieza."
              << endl;
         return;
@@ -38,32 +42,29 @@ void CortadoraLaser::procesarPieza() {
          << endl;
 
     registrarPieza();
-
     agregarTiempo(15);
 
     bool funciona = lente.reducirVida();
 
-    if (!funciona) {
-
+    if (!funciona)
+    {
         cout << "El lente se desgasto."
              << endl;
-
         reportarFalla();
     }
 }
 
-void CortadoraLaser::realizarMantenimiento() {
-
+void CortadoraLaser::realizarMantenimiento()
+{
     cout << "Realizando mantenimiento..."
          << endl;
 
     lente.restaurar();
-
     registrarMantenimiento();
 }
 
-void CortadoraLaser::mostrarEstado() {
-
+void CortadoraLaser::mostrarEstado() const
+{
     Maquina::mostrarEstado();
 
     cout << "Potencia laser: "
