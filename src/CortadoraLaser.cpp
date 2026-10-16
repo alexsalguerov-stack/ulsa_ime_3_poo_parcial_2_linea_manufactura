@@ -38,7 +38,7 @@ void CortadoraLaser::procesarPieza()
         return;
     }
 
-    cout << "La cortadora laser esta cortando la pieza."
+    cout << "La cortadora laser esta grabando la pieza."
          << endl;
 
     registrarPieza();
@@ -48,7 +48,7 @@ void CortadoraLaser::procesarPieza()
 
     if (!funciona)
     {
-        cout << "El lente se desgasto."
+        cout << "Lente desgastada."
              << endl;
         reportarFalla();
     }
