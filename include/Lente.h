@@ -1,8 +1,6 @@
 #ifndef LENTE_H
 #define LENTE_H
 
-using namespace std;
-
 class Lente
 {
 private:
