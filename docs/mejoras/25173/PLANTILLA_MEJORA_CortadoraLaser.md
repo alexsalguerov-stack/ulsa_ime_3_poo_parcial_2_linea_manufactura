@@ -42,3 +42,4 @@ Podría ser una relación de composición, porque el historial solo sirve para r
 
 Diagrama hecho en draw.io que muestre la solución con la mejora incorporada. Distingue lo nuevo de lo existente, por ejemplo con otro color. Guarda la imagen en esta misma carpeta y enlázala aquí.
 
+DiagramaMejora.png
