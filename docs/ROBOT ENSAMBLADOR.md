@@ -44,7 +44,7 @@ Usa el identificador, el nombre, el estado, los contadores de piezas, el tiempo 
 
 Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relación de herencia con `Maquina` y la de composición con tu componente. Guarda la imagen en `docs/` y enlázala aquí.
 
-[Inserta aquí tu diagrama]
+[![Inserta aquí tu diagrama](<DISEÑO CLASE ROBOT ENSAMBLADOR.drawio.png>)]
 
 ## 4. Bitácora
 
