@@ -1,4 +1,4 @@
-# Documentación de la clase: [Inserta aquí el nombre de tu clase]
+# Documentación de la clase: CORTADORA LASER
 
 > Copia este archivo como `docs/<Clase>.md` (por ejemplo, con el nombre de tu máquina) y llena tu copia. No modifiques la plantilla.
 
