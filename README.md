@@ -57,7 +57,7 @@ Lote de 20 piezas. Una fila por máquina.
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron?**
 
-[Inserta aquí tu respuesta]
+Sí, finalmente coincide al 100%. La ejecución final del programa genera de manera exacta las 20 piezas completadas, registra 1 paro por mantenimiento reactivo y acumula un tiempo total de operación de 3,720 segundos (62 minutos).
 
 ## 6. Diagrama general
 
