@@ -10,15 +10,45 @@ CortadoraLaser::CortadoraLaser(
     float velocidad)
     : Maquina(id, nombre), lente(30) // Inicializa el lente con 30 usos predeterminados
 {
-    potenciaLaser = potencia;
-    velocidadCorte = velocidad;
+    setpotenciaLaser(potencia);
+    setvelocidadCorte(velocidad);
 }
 
-void CortadoraLaser::ajustarPotencia(float p)
+void CortadoraLaser::setpotenciaLaser(float p)
 {
-    if (p > 0)
+    if (p < 0.0f)
+    {
+        cout << "Error: Potencia negativa (" << p << "%). Se ajusta a 0.0%." << endl;
+        potenciaLaser = 0.0f;
+    }
+    else if (p > 100.0f)
+    {
+        cout << "Error: Potencia excede el 100% (" << p << "%). Se fuerza al límite máximo: 100.0%." << endl;
+        potenciaLaser = 100.0f; // Corrección forzada
+    }
+    else
     {
         potenciaLaser = p;
+        cout << "Potencia del láser asignada correctamente: " << potenciaLaser << "%." << endl;
+    }
+}
+
+void CortadoraLaser::setvelocidadCorte(float v)
+{
+    if (v <= 0.0f)
+    {
+        cout << "Error: Velocidad de corte inválida (" << v << "). Se ajusta a 0.1 m/s." << endl;
+        velocidadCorte = 0.1f;
+    }
+    else if (v > 10.0f)
+    {
+        cout << "Error: Velocidad de corte excede el límite (" << v << " m/s). Se fuerza a 10.0 m/s." << endl;
+        velocidadCorte = 10.0f; // Corrección forzada
+    }
+    else
+    {
+        velocidadCorte = v;
+        cout << "Velocidad de corte asignada correctamente: " << velocidadCorte << " m/s." << endl;
     }
 }
 

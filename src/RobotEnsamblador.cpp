@@ -12,8 +12,46 @@ RobotEnsamblador::RobotEnsamblador(
       fuerzaPrensado(1.0f),
       pinza(vidaUtilPinza)
 {
-    ajustarPrecision(precision);
-    ajustarFuerzaPrensado(fuerza);
+    setprecisionPosicion(precision);
+    setfuerzaPrensado(fuerza);
+}
+
+void RobotEnsamblador::setprecisionPosicion(float p)
+{
+    if (p < 1.0f)
+    {
+        std::cout << "Error: Precisión fuera de rango (" << p << "). Se ajusta al mínimo seguro: 1." << std::endl;
+        precisionPosicion = 1;
+    }
+    else if (p > 100.0f)
+    {
+        std::cout << "Error: Precisión excede el límite (" << p << "). Se fuerza al máximo permitido: 100." << std::endl;
+        precisionPosicion = 100; // Corrección forzada
+    }
+    else
+    {
+        precisionPosicion = static_cast<int>(p);
+        std::cout << "Precisión de posición asignada correctamente: " << precisionPosicion << std::endl;
+    }
+}
+
+void RobotEnsamblador::setfuerzaPrensado(float f)
+{
+    if (f <= 0.0f)
+    {
+        std::cout << "Error: Fuerza inválida (" << f << " N). Se ajusta al mínimo seguro: 1.0 N." << std::endl;
+        fuerzaPrensado = 1.0f;
+    }
+    else if (f > 5000.0f)
+    {
+        std::cout << "Error: Fuerza excede el límite (" << f << " N > 5000 N). Se fuerza al máximo permitido: 5000.0 N." << std::endl;
+        fuerzaPrensado = 5000.0f; // Corrección forzada
+    }
+    else
+    {
+        fuerzaPrensado = f;
+        std::cout << "Fuerza de prensado asignada correctamente: " << fuerzaPrensado << " N." << std::endl;
+    }
 }
 
 void RobotEnsamblador::ajustarPrecision(int precision)

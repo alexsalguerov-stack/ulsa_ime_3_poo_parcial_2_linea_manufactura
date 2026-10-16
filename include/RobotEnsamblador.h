@@ -20,11 +20,10 @@ public:
     // Constructor
     RobotEnsamblador(
         int id,
-        const std::string& nombre,
+        const std::string &nombre,
         int precision,
         float fuerza,
-        int vidaUtilPinza
-    );
+        int vidaUtilPinza);
 
     // Métodos propios para configurar el robot
     void ajustarPrecision(int precision);
@@ -39,7 +38,8 @@ public:
 
     // Muestra el estado general y los datos propios del robot
     void mostrarEstado() const;
-
+    void setprecisionPosicion(float p);
+    void setfuerzaPrensado(float f);
 };
 
 #endif

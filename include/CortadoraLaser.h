@@ -21,7 +21,7 @@ public:
         float potencia,
         float velocidad);
 
-    void ajustarPotencia(float p);
+    void ajustarPotencia();
 
     void grabarDetalle(string patron);
 
@@ -30,6 +30,9 @@ public:
     void realizarMantenimiento();
 
     void mostrarEstado() const;
+
+    void setpotenciaLaser(float p);
+    void setvelocidadCorte(float p);
 };
 
 #endif

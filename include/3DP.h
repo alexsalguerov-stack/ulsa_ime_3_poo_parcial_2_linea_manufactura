@@ -4,20 +4,24 @@
 #include "Extrusor.h"
 #include <string>
 
-class Impresora3D : public Maquina {
+class Impresora3D : public Maquina
+{
 private:
-    Extrusor* extrusor;
+    Extrusor *extrusor;
     float tempBoquilla;
     float tempExtrusor;
     float velocidadImpresion;
 
 public:
-    Impresora3D(int id, const std::string& nombre);
+    Impresora3D(int id, const std::string &nombre);
     ~Impresora3D();
 
     void calentarBoquilla(float temp);
-    void fabricarPieza(const std::string& id);
+    void fabricarPieza(const std::string &id);
     void realizarMantenimiento();
+    void setvelocidadImpresion(float v);
+    void settempExtrusor(float t);
+    void settempBoquilla(float t);
 
-    void procesarPieza() override;
+    void procesarPieza();
 };

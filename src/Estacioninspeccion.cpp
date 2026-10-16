@@ -7,17 +7,50 @@ EstacionInspeccion::EstacionInspeccion(int id, string nombre, float tolerancia,
                                        int limiteSensor, int segundos)
     : Maquina(id, nombre), sensor(limiteSensor)
 { // Inicializa el objeto sensor
-    if (tolerancia <= 0)
-    {
-        tolerancia = 0.05f;
-    }
+    settoleranciasError(tolerancia);
+
     if (segundos <= 0)
     {
-        segundos = 25; // 25s por pieza según la tabla de la planta
+        cout << "Error: Segundos por pieza inválidos (" << segundos << "). Se ajusta al estándar de seguridad: 25 s." << endl;
+        segundosPorPieza = 25;
     }
-    toleranciaError = tolerancia;
-    segundosPorPieza = segundos;
+    else
+    {
+        segundosPorPieza = segundos;
+    }
+
     medicionesRealizadas = 0;
+}
+
+void EstacionInspeccion::settoleranciasError(float t)
+{
+    if (t < 0.001f)
+    {
+        cout << "Error: Tolerancia demasiado estricta (" << t << "). Se ajusta al mínimo seguro: 0.001 mm." << endl;
+        toleranciaError = 0.001f;
+    }
+    else if (t > 1.0f)
+    {
+        cout << "Error: Tolerancia demasiado alta (" << t << " mm). Se fuerza al máximo permitido: 1.0 mm." << endl;
+        toleranciaError = 1.0f; // Corrección forzada
+    }
+    else
+    {
+        toleranciaError = t;
+        cout << "Tolerancia de error asignada correctamente: " << toleranciaError << " mm." << endl;
+    }
+}
+
+void EstacionInspeccion::setmedicionesRealizadas(int m)
+{
+    if (m < 0)
+    {
+        medicionesRealizadas = 0;
+    }
+    else
+    {
+        medicionesRealizadas = m;
+    }
 }
 
 bool EstacionInspeccion::medirTolerancia(float valor)

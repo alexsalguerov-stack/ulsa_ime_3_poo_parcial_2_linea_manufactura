@@ -28,6 +28,8 @@ public:
     float getToleranciaError() const;
     int getMedicionesRealizadas() const;
     int getSegundosPorPieza() const;
+    void settoleranciasError(float t);
+    void setmedicionesRealizadas(int m);
 };
 
 #endif

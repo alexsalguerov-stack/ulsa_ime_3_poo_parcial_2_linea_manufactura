@@ -6,7 +6,8 @@
 #include "RobotEnsamblador.h"
 #include "Estacioninspeccion.h"
 
-int main() {
+int main()
+{
     Planta miPlanta;
 
     // --- CREACIÓN DE MÁQUINAS (Adaptado a nuevos constructores de los compañeros) ---
@@ -15,7 +16,7 @@ int main() {
     Impresora3D impresora(1, "Impresora 3D");
 
     // Banda (velocidad, cargaMax, id, nombre, vidaMotor)
-    BandaTransportadora banda(1.5f, 10.0f, 2, "Banda Transportadora", 50);
+    BandaTransportadora banda(1.5f, 20.0f, 2, "Banda Transportadora", 50);
 
     // Cortadora (id, nombre, potencia, velocidad)
     CortadoraLaser laser(3, "Cortadora Laser", 100.0f, 5.0f);

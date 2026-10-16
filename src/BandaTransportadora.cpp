@@ -41,6 +41,7 @@ void BandaTransportadora::setCapacidadCargaMax(float c)
     else if (c > 10.0f)
     {
         std::cout << "Error: El peso no puede superar los 10 Kgs." << std::endl;
+        capacidadCargaMax = 10.0f;
     }
     else
     {
