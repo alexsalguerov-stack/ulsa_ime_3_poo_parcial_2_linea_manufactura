@@ -25,7 +25,10 @@ Escriban el orden en que una pieza recorre las estaciones.
 
 Escriban el comando exacto que usa el equipo para compilar y el comando para ejecutar.
 
+Windows
  g++ -Wall -Wextra -std=c++17 -I include src/3DP.cpp src/BandaTransportadora.cpp src/CortadoraLaser.cpp src/Estacioninspeccion.cpp src/Lente.cpp src/main.cpp src/Maquina.cpp src/Motor.cpp src/Pinza.cpp src/Planta.cpp src/RobotEnsamblador.cpp src/Sensor.cpp -o simulacion.exe ; .\simulacion.exe 
+ MacOS
+ g++ -Wall -Wextra -std=c++17 -I include src/*.cpp -o simulacion.exe ; .\simulacion.exe
 
 ## 4. Reglas de la simulación
 
