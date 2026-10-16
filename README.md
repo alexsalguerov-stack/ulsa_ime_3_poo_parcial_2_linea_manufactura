@@ -8,11 +8,11 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 
 | Bloque | Matrícula | Nombre | Usuario de GitHub | Máquina | Componente |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 25292 | Yurik David Alarcon Gutierez | Kothy-Web | Robot Ensamblador | |
-| 2 | 25173 | Cesar Leonardo Garrido Gonzalez| clgarridog1604 | Cortadora Laser  | |
-| 3 | 26011 | Alejandro Salguero Vega | alexsalguerov-stack | Impresora 3D | |
-| 4 | 25085 | Jorge Antonio Sadurni Cerdio | Jorge-Sadurni | Banda Transpotadora| |
-| 5 | 25176 | Dannia Ximena Plata Palos | dannia-plata | Inspeccion | |
+| 1 | 25292 | Yurik David Alarcon Gutierez | Kothy-Web | Robot Ensamblador | Pinza |
+| 2 | 25173 | Cesar Leonardo Garrido Gonzalez| clgarridog1604 | Cortadora Laser  | Lente |
+| 3 | 26011 | Alejandro Salguero Vega | alexsalguerov-stack | Impresora 3D | Extrusor |
+| 4 | 25085 | Jorge Antonio Sadurni Cerdio | Jorge-Sadurni | Banda Transpotadora| Motor |
+| 5 | 25176 | Dannia Ximena Plata Palos | dannia-plata | Inspeccion | Sensor |
 | 6 (solo equipo de seis) | | | | | |
 
 ## 2. Orden de la línea
