@@ -43,4 +43,4 @@ No sería necesario agregar nuevas relaciones de herencia ni de composición. Se
 Diagrama hecho en draw.io que muestre la solución con la mejora incorporada. Distingue lo nuevo de lo existente, por ejemplo con otro color. Guarda la imagen en esta misma carpeta y enlázala aquí.
 
 <img src="PROPUESTA DE MEJORA DE ROBOT ENSAMBLADOR.drawio (1).png">
-[![Inserta aquí tu diagrama](docs/PROPUESTA DE MEJORA DE ROBOT ENSAMBLADOR.drawio (1).png)]
+
