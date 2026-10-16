@@ -4,39 +4,40 @@
 >
 > La propuesta es solo diseño: no se programa.
 
-**Propuesta de mejora elaborada por:** Jorge Antonio Sadurni Cerdio
+**Propuesta de mejora elaborada por:** Dannia Ximena Plata Palos
 
 ## 1. Impacto
 
 **¿Es una mejora o una corrección?**
 
-[Inserta aquí tu respuesta]
+[Es una mejora: la estación hoy mide cada pieza, pero no guarda el resultado.]
 
 **¿Qué observaste en la solución del equipo que dio origen a la propuesta?**
 
-[Inserta aquí tu respuesta]
+[En nuestra solución, inspeccionarCalidad() solo imprime si la pieza pasó o no. No se guarda ni se cuenta. El reporte dice cuántas piezas se terminaron, pero no cuántas estaban fuera de tolerancia.]
 
 **¿Qué mejora o qué corrige, y por qué vale la pena?**
 
-[Inserta aquí tu respuesta]
+[La estación guardaría el resultado de cada medición y contaría las piezas rechazadas. Así el reporte puede decir cuántas piezas salieron buenas y cuántas malas.]
 
 ## 2. Qué implica
 
 **Clases nuevas:**
 
-[Inserta aquí tu respuesta]
+[• ResultadoInspeccion: guarda una medición. Tiene numeroPieza, desviacion y aprobada, y un método mostrar().]
 
 **Comportamiento nuevo en clases existentes:**
 
-[Inserta aquí tu respuesta]
+[EstacionInspeccion tendrá un vector<ResultadoInspeccion> historial y un contador piezasRechazadas. En inspeccionarCalidad() guarda el resultado de cada pieza. Métodos nuevos: getPiezasRechazadas() y mostrarHistorial(). Además, mostrarEstado() también muestra las rechazadas.]
 
 **Interacciones nuevas entre objetos:**
 
-[Inserta aquí tu respuesta]
+[EstacionInspeccion crea un ResultadoInspeccion por cada pieza y lo guarda. Las demás clases no cambian.]
 
 **Relaciones nuevas (herencia, composición o agregación) y por qué son de ese tipo:**
 
-[Inserta aquí tu respuesta]
+[• Composición EstacionInspeccion – ResultadoInspeccion: los resultados se crean dentro de la estación y desaparecen con ella.
+• No hay herencia nueva.]
 
 ## 3. Diagrama de clases
 
