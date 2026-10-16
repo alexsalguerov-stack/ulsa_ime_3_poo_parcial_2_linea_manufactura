@@ -53,6 +53,8 @@ public:
     // true solo si la máquina está encendida y sin falla.
     bool puedeProcesar() const;
 
+    virtual void procesarPieza();
+
     int getId() const;
     std::string getNombre() const;
     int getPiezasProcesadas() const;
