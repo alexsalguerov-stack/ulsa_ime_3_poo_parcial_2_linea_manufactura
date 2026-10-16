@@ -73,7 +73,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | Alejandro Salguero Vega | docs\IMPRESORA3D_CLASE.md | docs\mejoras\26011\IMPRESORA3D_MEJORA.md |
 | Jorge Antonio Sadurni Cerdio | docs\BANDA.TRANSPORTADORA.md | docs\mejoras\25085\PLANTILLA_MEJORA_Banda_Transportadora.md |
 | Yurik David Alarcon Gtz.| docs\ROBOT ENSAMBLADOR.md| docs\mejoras\25292\PLANTILLA_MEJORA.md|
-|César Leonardo Garrido Glz. |docs\PLANTILLA_CLASE Cortadora Laser.md |docs\mejoras\25173\PLANTILLA_MEJORA_CortadoraLaser.md |
+|César Leonardo Garrido Glz. |docs\PLANTILLA_CLASE Cortadora Laser.md |docs\mejoras\25173\PLANTILLA_MEJORA_CortadoraLaser.md 
 
 ## 8. Cambios a `Maquina.h`
 
