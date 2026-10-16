@@ -51,14 +51,15 @@ Además agrega atributos propios relacionados con el corte láser, un componente
 ## 3. Diagrama
 
 Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relación de herencia con `Maquina` y la de composición con tu componente. Guarda la imagen en `docs/` y enlázala aquí.
-DiagramaCortadoraLaser.png 
+
+[Corta![Diagrama Cortadora](DiagramaCortadoraLaser-1.png)doraLaser] 
 
 ## 4. Bitácora
 
 **Dudas que tuviste y cómo las resolviste:**
 
-[Inserta aquí tu respuesta]
+tuve dudas sobre la relación entre la Cortadora Láser y el Lente. Revisando los conceptos de composición, concluí que el lente debía formar parte de la máquina porque no tiene utilidad por sí solo dentro de la simulación.
 
 **Errores que encontraste y cómo los corregiste:**
 
-[Inserta aquí tu respuesta]
+Uno de los errores encontrados fue que la máquina seguía funcionando después de que el lente agotaba su vida útil. Este problema se corrigió agregando una verificación después de procesar cada pieza para reportar una falla cuando el lente llegaba a cero.
