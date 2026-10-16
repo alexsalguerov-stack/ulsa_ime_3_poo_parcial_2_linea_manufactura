@@ -14,7 +14,7 @@ Es una mejora.
 
 **¿Qué observaste en la solución del equipo que dio origen a la propuesta?**
 
-Observé que la `Impresora3D` actual asume que si la temperatura es seteada y el extrusor tiene vida útil, la pieza se fabricará correctamente. Sin embargo, en la realidad, existen fallas comunes como el "atascamiento de filamento" (clogging) o fluctuaciones de temperatura que pueden arruinar una pieza sin que la máquina se "apague" o el componente "muera" técnicamente.
+Observé que la `Impresora3D` actual asume que si la temperatura es seteada y el extrusor tiene vida útil, la pieza se fabricará correctamente. Aunque ya se implementó una validación de rangos de seguridad en los métodos `set` para evitar temperaturas extremas o velocidades inválidas, la máquina sigue siendo 'ciega' a lo que ocurre durante el proceso. En la realidad, existen fallas comunes como el "atascamiento de filamento" (clogging) o fluctuaciones de temperatura que pueden arruinar una pieza sin que la máquina se "apague" o el componente "muera" técnicamente.
 
 **¿Qué mejora o qué corrige, y por qué vale la pena?**
 

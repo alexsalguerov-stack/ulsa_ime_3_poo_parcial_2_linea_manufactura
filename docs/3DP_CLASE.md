@@ -19,9 +19,9 @@ La función del extrusor es mover el material a traves de la boquilla caliente p
 
 **Atributos propios de tu clase y validación de cada uno:**
 
-- `tempBoquilla` (float): Temperatura de la boquilla; se valida que sea mayor a 0 y no exceda el límite del material (ej. 260°C).
-- `tempExtrusor` (float): Temperatura de control del bloque; validada para evitar sobrecalentamiento.
-- `velocidadImpresion` (float): Velocidad de avance; validada para que sea positiva, ya que define el tiempo de procesamiento.
+- `tempBoquilla` (float): Temperatura de la boquilla; se valida que esté entre 20°C y 300°C. Si el valor es inválido, se ajusta automáticamente al límite correspondiente para evitar daños.
+- `tempExtrusor` (float): Temperatura de control del bloque; validada entre 20°C y 250°C mediante un método set que fuerza el rango de seguridad.
+- `velocidadImpresion` (float): Velocidad de avance; validada para estar entre 0.1 m/s y 5.0 m/s, asegurando que la pieza se mueva a una velocidad realista y segura.
 
 **Métodos propios (los que la clase base no tiene):**
 
