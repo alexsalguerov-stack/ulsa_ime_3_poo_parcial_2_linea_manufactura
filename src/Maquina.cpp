@@ -93,6 +93,7 @@ void Maquina::registrarMantenimiento()
 {
     enFalla = false;
     paros++;
+    agregarTiempo(120);
 }
 
 void Maquina::mostrarEstado() const
