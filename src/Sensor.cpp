@@ -1,20 +1,36 @@
-#ifndef SENSOR_H
-#define SENSOR_H
+#include "Sensor.h"
 
+Sensor::Sensor(int limiteInicial)
+{
+    if (limiteInicial <= 0)
+    {
+        limiteInicial = 25; // Límite predeterminado alineado con la estación de inspección
+    }
+    limite = limiteInicial;
+    vidaUtil = limiteInicial;
+}
 
-class Sensor {
-private:
-    int vidaUtil;   
-    int limite;    
+bool Sensor::reducirVida()
+{
+    if (vidaUtil > 0)
+    {
+        vidaUtil--;
+    }
+    // Retorna true si el sensor SIGUE operativo, o false si se agotó (vidaUtil == 0)
+    return vidaUtil > 0;
+}
 
-public:
-    Sensor(int lim);
+void Sensor::restaurar()
+{
+    vidaUtil = limite;
+}
 
-    bool reducirVida();   
-    void restaurar();    
+int Sensor::getVidaUtil() const
+{
+    return vidaUtil;
+}
 
-    int getVidaUtil() const;
-    int getLimite() const;
-};
-
-#endif
+int Sensor::getLimite() const
+{
+    return limite;
+}

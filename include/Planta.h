@@ -3,27 +3,26 @@
 
 #include <vector>
 #include <string>
-#include "Maquina.h" // Necesario para reconocer la clase base Maquina
+#include "Maquina.h"
 
 class Planta
 {
 private:
-    int piezasTerminadas;
-    // Guardamos punteros a Maquina para aceptar cualquier tipo de máquina derivada (como BandaTransportadora)
-    std::vector<Maquina *> maquinas;
+    std::vector<Maquina *> linea;
 
 public:
-    // Constructor
-    Planta();
+    Planta() {}
 
-    // Permite agregar las máquinas en orden desde afuera
-    void agregarMaquina(Maquina *maquina);
+    void registrarMaquina(Maquina *m)
+    {
+        if (m != nullptr)
+        {
+            linea.push_back(m);
+        }
+    }
 
-    // Procesa un lote de piezas haciendo que cada una pase por todas las máquinas
-    void procesarLote(int cantidadPiezas);
-
-    // Genera el reporte general al terminar el turno
-    void mostrarReporte() const;
+    int procesarLote(int cantidad);
+    void generarReporte();
 };
 
-#endif // PLANTA_H
+#endif

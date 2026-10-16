@@ -35,9 +35,12 @@ protected:
     void reportarFalla();
 
     // Quita la falla y suma un paro.
-    void registrarMantenimiento();
+    virtual void registrarMantenimiento();
 
 public:
+    // Metodo para realizar el mantenimiento especifico de la maquina y su componente
+    virtual void realizarMantenimiento() {}
+
     // Crea una máquina apagada, sin falla y con sus contadores en cero.
     Maquina(int id, const std::string& nombre);
 
@@ -52,6 +55,8 @@ public:
 
     // true solo si la máquina está encendida y sin falla.
     bool puedeProcesar() const;
+
+    virtual void procesarPieza();
 
     int getId() const;
     std::string getNombre() const;

@@ -18,7 +18,7 @@ El equipo responde por la solución completa. Cada integrante responde por su pr
 
 ## 2. El problema
 
-Una empresa fabrica soportes metálicos en una línea de cinco estaciones. Cada pieza pasa por las cinco, siempre en el mismo orden. El programa simula un turno de trabajo: procesa un lote de piezas, detecta cuándo una máquina falla, le da mantenimiento y al final entrega un reporte del turno.
+Una empresa fabrica carritos de juguete a escala en una línea de cinco estaciones. Cada pieza pasa por las cinco, siempre en el mismo orden. El programa simula un turno de trabajo: procesa un lote de piezas, detecta cuándo una máquina falla, le da mantenimiento y al final entrega un reporte del turno.
 
 La simulación es determinista (sin números aleatorios), para que el resultado se pueda calcular a mano y comprobar.
 
