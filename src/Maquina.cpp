@@ -107,3 +107,8 @@ void Maquina::mostrarEstado() const
     std::cout << "Tiempo trabajado: " << tiempoTrabajado << " segundos" << std::endl;
     std::cout << "Paros por mantenimiento: " << paros << std::endl;
 }
+
+void Maquina::procesarPieza()
+{
+    // Metodo base: no hace nada por defecto, es implementado por las clases hijas.
+}
