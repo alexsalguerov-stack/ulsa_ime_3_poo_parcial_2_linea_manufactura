@@ -50,8 +50,10 @@ Diagrama de tu clase y su componente, hecho en draw.io. Debe mostrar la relació
 
 **Dudas que tuviste y cómo las resolviste:**
 
-
+- *Implementación de la herencia:* Tuve dudas sobre cómo acceder a los métodos de `Maquina` desde `Impresora3D`. Lo resolví configurando los métodos `registrarPieza` y `agregarTiempo` como `protected` en la clase base para que las clases derivadas pudieran utilizarlos sin exponerlos al usuario final.
+- *Gestión del componente:* No estaba seguro de si el `Extrusor` debía ser un atributo simple o una clase. Decidí crear una clase separada para encapsular la lógica de `vidaUtil` y `reducirVida`, siguiendo el principio de responsabilidad única.
 
 **Errores que encontraste y cómo los corregiste:**
 
-
+- *Fugas de memoria:* Olvidé implementar el destructor en `Impresora3D`, lo que causaba que el objeto `Extrusor` creado con `new` no se liberara. Lo corregí agregando el destructor `~Impresora3D()` que ejecuta `delete extrusor`.
+- *Lógica de falla:* Inicialmente, el programa seguía registrando la pieza aunque el extrusor hubiera fallado. Corregí el flujo en `procesarPieza()` para que el método `reportarFalla()` se llame inmediatamente y se detenga la ejecución con un `return` si `reducirVida()` devuelve falso.
