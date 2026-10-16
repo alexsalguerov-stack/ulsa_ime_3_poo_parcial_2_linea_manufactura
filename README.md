@@ -74,6 +74,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | Jorge Antonio Sadurni Cerdio | docs\BANDA.TRANSPORTADORA.md | docs\mejoras\25085\PLANTILLA_MEJORA_Banda_Transportadora.md |
 | Yurik David Alarcon Gtz.| docs\ROBOT ENSAMBLADOR.md| docs\mejoras\25292\PLANTILLA_MEJORA.md|
 |César Leonardo Garrido Glz. |docs\PLANTILLA_CLASE Cortadora Laser.md |docs\mejoras\25173\PLANTILLA_MEJORA_CortadoraLaser.md |
+|Dannia Ximena Plata Palos| docs\Estacioninspeccion.md| docs\mejoras\25176\PLANTILLA_MEJORA_Estacioninspeccion.md|
 
 ## 8. Cambios a `Maquina.h`
 
