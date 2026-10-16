@@ -8,18 +8,17 @@
 class Planta
 {
 private:
-    int piezasTerminadas;
-
-    std::vector<Maquina *> maquinas;
+    std::vector<Maquina *> linea;
 
 public:
-    Planta();
+    Planta() {}
 
-    void agregarMaquina(Maquina *maquina);
+    void registrarMaquina(Maquina *m) {
+        linea.push_back(m);
+    }
 
-    void procesarLote(int cantidadPiezas);
-
-    void mostrarReporte() const;
+    int procesarLote(int cantidad);
+    void generarReporte();
 };
 
 #endif
