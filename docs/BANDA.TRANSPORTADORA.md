@@ -70,4 +70,4 @@ Las dudas que tuve fueron, cuales metodos esenciales tiene que tener la clase de
 
 **Errores que encontraste y cómo los corregiste:**
 
-[Inserta aquí tu respuesta]
+Inconsistencias de firmas y tipos: Se unificaron los tipos de retorno y los modificadores const en la clase de la banda transportadora y sus componentes para asegurar una correcta compatibilidad con el resto del sistema.
