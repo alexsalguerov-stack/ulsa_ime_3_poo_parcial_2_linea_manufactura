@@ -1,36 +1,36 @@
 #include "Sensor.h"
 
-Sensor::Sensor(int lim) {
-
-    if (lim <= 0) {
-        lim = 1;
+Sensor::Sensor(int limiteInicial)
+{
+    if (limiteInicial <= 0)
+    {
+        limiteInicial = 25; // Límite predeterminado alineado con la estación de inspección
     }
-
-    limite = lim;
-    vidaUtil = lim;
+    limite = limiteInicial;
+    vidaUtil = limiteInicial;
 }
 
-bool Sensor::reducirVida() {
-
-    if (vidaUtil > 0) {
-        vidaUtil = vidaUtil - 1;
+bool Sensor::reducirVida()
+{
+    if (vidaUtil > 0)
+    {
+        vidaUtil--;
     }
-
-    if (vidaUtil == 0) {
-        return true;
-    }
-
-    return false;
+    // Retorna true si el sensor SIGUE operativo, o false si se agotó (vidaUtil == 0)
+    return vidaUtil > 0;
 }
 
-void Sensor::restaurar() {
+void Sensor::restaurar()
+{
     vidaUtil = limite;
 }
 
-int Sensor::getVidaUtil() const {
+int Sensor::getVidaUtil() const
+{
     return vidaUtil;
 }
 
-int Sensor::getLimite() const {
+int Sensor::getLimite() const
+{
     return limite;
 }

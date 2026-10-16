@@ -37,10 +37,10 @@ protected:
     // Quita la falla y suma un paro.
     virtual void registrarMantenimiento();
 
+public:
     // Metodo para realizar el mantenimiento especifico de la maquina y su componente
     virtual void realizarMantenimiento() {}
 
-public:
     // Crea una máquina apagada, sin falla y con sus contadores en cero.
     Maquina(int id, const std::string& nombre);
 

@@ -3,7 +3,8 @@
 
 using namespace std;
 
-class Lente {
+class Lente
+{
 private:
     int vidaUtil;
 
@@ -12,7 +13,7 @@ public:
 
     bool reducirVida();
 
-    int getVidaUtil();
+    int getVidaUtil() const;
 
     void restaurar();
 };

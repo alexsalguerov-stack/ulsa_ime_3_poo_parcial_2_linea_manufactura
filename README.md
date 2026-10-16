@@ -10,7 +10,7 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 | --- | --- | --- | --- | --- | --- |
 | 1 | 25292 | Yurik David Alarcon Gutierez | Kothy-Web | Robot Ensamblador | |
 | 2 | 25173 | Cesar Leonardo Garrido Gonzalez| clgarridog1604 | Cortadora Laser  | |
-| 3 | 26011 | Alejandro Salguero Vega | alexsalguerov/stack | Impresora 3D | |
+| 3 | 26011 | Alejandro Salguero Vega | alexsalguerov-stack | Impresora 3D | |
 | 4 | 25085 | Jorge Antonio Sadurni Cerdio | Jorge-Sadurni | Banda Transpotadora| |
 | 5 | 25176 | Dannia Ximena Plata Palos | dannia-plata | Inspeccion | |
 | 6 (solo equipo de seis) | | | | | |

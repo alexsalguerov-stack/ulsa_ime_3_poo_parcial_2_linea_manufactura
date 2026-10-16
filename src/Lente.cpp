@@ -1,24 +1,29 @@
 #include "Lente.h"
 
-Lente::Lente(int vida) {
+Lente::Lente(int vida)
+{
     vidaUtil = vida;
 }
 
-bool Lente::reducirVida() {
+bool Lente::reducirVida()
+{
 
     vidaUtil--;
 
-    if (vidaUtil <= 0) {
+    if (vidaUtil <= 0)
+    {
         return false;
     }
 
     return true;
 }
 
-int Lente::getVidaUtil() {
+int Lente::getVidaUtil() const
+{
     return vidaUtil;
 }
 
-void Lente::restaurar() {
+void Lente::restaurar()
+{
     vidaUtil = 10;
 }

@@ -6,24 +6,20 @@
 #include "Maquina.h"
 #include "Lente.h"
 
-using namespace std;
-
-class CortadoraLaser : public Maquina {
+class CortadoraLaser : public Maquina
+{
 
 private:
-
     Lente lente;
     float potenciaLaser;
     float velocidadCorte;
 
 public:
-
     CortadoraLaser(
         int id,
         string nombre,
         float potencia,
-        float velocidad
-    );
+        float velocidad);
 
     void ajustarPotencia(float p);
 
@@ -33,7 +29,7 @@ public:
 
     void realizarMantenimiento();
 
-    void mostrarEstado();
+    void mostrarEstado() const;
 };
 
 #endif
